@@ -18,14 +18,14 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="min-h-screen bg-vikings-blue flex items-center justify-center px-4 py-20">
+      <section className="h-screen bg-vikings-blue flex items-center justify-center px-4 pt-20">
         <div className="text-center max-w-3xl mx-auto">
           <Image
             src="/images/logo_color.png"
             alt="Logo Vikings Volei Prat"
-            width={200}
-            height={200}
-            className="h-[140px] sm:h-[200px] w-auto mx-auto mb-10"
+            width={280}
+            height={280}
+            className="h-[160px] sm:h-[280px] w-auto mx-auto mb-10"
             priority
           />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -37,13 +37,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/equips"
-              className="px-8 py-3.5 bg-vikings-yellow text-vikings-dark font-semibold rounded-full hover:brightness-110 transition-all duration-150"
+              className="px-8 py-3.5 bg-vikings-yellow text-vikings-dark font-semibold rounded-lg hover:brightness-110 transition-all duration-150"
             >
               Els nostres equips
             </Link>
             <a
               href="mailto:cvprat@gmail.com"
-              className="px-8 py-3.5 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-vikings-blue transition-all duration-150"
+              className="px-8 py-3.5 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-vikings-blue transition-all duration-150"
             >
               Contacta'ns
             </a>
