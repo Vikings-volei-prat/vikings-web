@@ -11,7 +11,16 @@ const highlights = [
   'Benjamí fins a Superlliga 2',
   'Volei platja i pista',
   'Escoles i instituts del municipi',
-  'Projectes socials locals i internacionals',
+  'Tecnificacions de Nadal i Setmana Santa',
+  'Vikings Open Calamar',
+  'Projectes socials a Uganda i altres',
+];
+
+const values = [
+  { emoji: '🏐', title: 'Tecnificacions', text: 'Nadal i Setmana Santa' },
+  { emoji: '🤝', title: 'Torneigs benèfics', text: 'Per a hospitals infantils' },
+  { emoji: '☀️', title: 'Casals d\'estiu', text: 'Multiesportius' },
+  { emoji: '🌍', title: 'Projectes socials', text: 'Local i internacional' },
 ];
 
 export default function Home() {
@@ -66,15 +75,23 @@ export default function Home() {
       {/* Sobre el club */}
       <section className="bg-[#F8F8F8] py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-vikings-dark mb-12">
-            Un club amb identitat
-          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              El Club Volei Prat, conegut com Vikings Volei Prat, és una entitat esportiva sense
-              ànim de lucre que representa el voleibol al Prat de Llobregat des de l'any 1993.
-            </p>
-            <ul className="space-y-4">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-vikings-dark mb-6">
+                Un projecte en creixement
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-5">
+                El Club Volei Prat, conegut com Vikings Volei Prat, és una entitat esportiva sense
+                ànim de lucre que representa el voleibol al Prat de Llobregat des de l'any 1993.
+                Amb més de 30 anys d'història, el club s'ha convertit en un referent esportiu a
+                Catalunya, especialment al Baix Llobregat.
+              </p>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Actualment comptem amb més de 340 jugadors i jugadores, repartits en 30 equips
+                federats i escolars, des de benjamí fins a sènior, tant en pista com en vòlei platja.
+              </p>
+            </div>
+            <ul className="space-y-4 md:pt-2">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="text-vikings-yellow text-2xl leading-none mt-0.5" aria-hidden>●</span>
@@ -82,6 +99,28 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Formació i valors */}
+      <section className="bg-white py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-vikings-dark mb-10">
+            Formació i valors
+          </h2>
+          <div className="grid grid-cols-2 gap-4">
+            {values.map(({ emoji, title, text }) => (
+              <div
+                key={title}
+                className="bg-[#F8F8F8] rounded-lg p-6"
+                style={{ borderTop: '3px solid #1B4FC4' }}
+              >
+                <span className="text-3xl mb-4 block">{emoji}</span>
+                <p className="font-bold text-gray-900 mb-1">{title}</p>
+                <p className="text-sm text-gray-500">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
