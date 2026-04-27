@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const stats = [
@@ -19,9 +20,14 @@ export default function Home() {
       {/* Hero */}
       <section className="min-h-screen bg-vikings-blue flex items-center justify-center px-4 py-20">
         <div className="text-center max-w-3xl mx-auto">
-          <div className="w-28 h-28 bg-white/10 rounded-full mx-auto mb-10 flex items-center justify-center border-2 border-white/20">
-            <span className="text-5xl font-bold text-vikings-yellow">V</span>
-          </div>
+          <Image
+            src="/images/logo_color.png"
+            alt="Logo Vikings Volei Prat"
+            width={200}
+            height={200}
+            className="h-[140px] sm:h-[200px] w-auto mx-auto mb-10"
+            priority
+          />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-vikings-yellow">Vikings</span> Volei Prat
           </h1>

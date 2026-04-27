@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div>
-            <p className="font-bold text-lg text-vikings-yellow mb-3">Vikings Volei Prat</p>
+            <div className="flex items-center gap-3 mb-3">
+              <Image
+                src="/images/logo_color.png"
+                alt="Logo Vikings Volei Prat"
+                width={200}
+                height={200}
+                style={{ height: '48px', width: 'auto', filter: 'brightness(0) invert(1)' }}
+              />
+              <p className="font-bold text-lg text-vikings-yellow">Vikings Volei Prat</p>
+            </div>
             <p className="text-sm text-white/70 leading-relaxed">
               Club de voleibol del Prat de Llobregat.<br />
               Formació, competició i esport en valors.

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -18,7 +19,14 @@ export default function Navbar() {
     <header className="bg-vikings-blue text-white shadow-md">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+          <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+            <Image
+              src="/images/logo_color.png"
+              alt="Logo Vikings Volei Prat"
+              width={200}
+              height={200}
+              style={{ height: '40px', width: 'auto' }}
+            />
             <span className="font-bold text-xl text-vikings-yellow">Vikings</span>
             <span className="font-medium text-white">Volei Prat</span>
           </Link>
