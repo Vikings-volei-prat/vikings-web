@@ -53,11 +53,11 @@ export default function Home() {
 
       {/* Stats */}
       <section className="bg-white py-20 px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-12">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
           {stats.map(({ number, label }) => (
-            <div key={label} className="text-center">
-              <p className="text-6xl font-bold text-vikings-blue mb-3">{number}</p>
-              <p className="text-gray-500 text-sm font-medium uppercase tracking-wide">{label}</p>
+            <div key={label} className="bg-vikings-blue rounded-xl p-6 text-center">
+              <p className="text-6xl font-bold text-vikings-yellow mb-3">{number}</p>
+              <p className="text-sm font-medium uppercase tracking-wide text-white/75">{label}</p>
             </div>
           ))}
         </div>
@@ -88,14 +88,14 @@ export default function Home() {
 
       {/* Instagram */}
       <section className="bg-white py-20 px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-[900px] mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-vikings-dark mb-2">
               Segueix-nos a Instagram
             </h2>
             <p className="text-gray-400 font-medium">@voleiprat</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10">
+          <div className="grid grid-cols-3 gap-3 mb-10">
             {Array.from({ length: 6 }).map((_, i) => (
               <div key={i} className="aspect-square bg-vikings-blue/20 rounded-lg" />
             ))}
@@ -105,7 +105,7 @@ export default function Home() {
               href="https://instagram.com/voleiprat"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3.5 bg-vikings-blue text-white font-semibold rounded-full hover:bg-vikings-dark transition-colors duration-150"
+              className="inline-block px-8 py-3.5 bg-vikings-blue text-white font-semibold rounded-lg hover:bg-vikings-dark transition-colors duration-150"
             >
               Veure perfil
             </a>
@@ -125,7 +125,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:cvprat@gmail.com"
-            className="inline-block px-10 py-4 bg-vikings-yellow text-vikings-dark font-semibold text-lg rounded-full hover:brightness-110 transition-all duration-150"
+            className="inline-block px-10 py-4 bg-vikings-yellow text-vikings-dark font-semibold text-lg rounded-lg hover:brightness-110 transition-all duration-150"
           >
             Contacta'ns
           </a>
