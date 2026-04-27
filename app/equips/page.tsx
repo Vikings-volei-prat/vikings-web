@@ -11,7 +11,7 @@ export default function EquipsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-vikings-blue pt-28 pb-16 px-4 text-center">
+      <section className="bg-vikings-blue py-16 px-4 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
           Els nostres equips
         </h1>
@@ -37,7 +37,7 @@ export default function EquipsPage() {
                 alt="Logo Vikings Volei Prat"
                 width={120}
                 height={120}
-                className="opacity-20 h-[120px] w-auto"
+                className="opacity-35 h-[120px] w-auto"
               />
             </div>
           </div>
