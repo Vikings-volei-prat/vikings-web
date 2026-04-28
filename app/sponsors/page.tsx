@@ -48,7 +48,7 @@ export default function SponsorsPage() {
                   alt={`Logo ${name}`}
                   width={300}
                   height={120}
-                  style={{ objectFit: 'contain', height: '80px', width: 'auto' }}
+                  style={{ objectFit: 'contain', height: '80px', width: 'auto', mixBlendMode: 'multiply' }}
                 />
                 <span className="mt-4 text-sm font-medium text-gray-500">{name}</span>
               </a>
@@ -73,7 +73,7 @@ export default function SponsorsPage() {
                   alt={`Logo ${name}`}
                   width={300}
                   height={120}
-                  style={{ objectFit: 'contain', height: '60px', width: 'auto' }}
+                  style={{ objectFit: 'contain', height: '100px', width: 'auto', mixBlendMode: 'multiply' }}
                 />
                 <span className="mt-3 text-sm font-medium text-gray-500">{name}</span>
               </a>
@@ -95,11 +95,11 @@ export default function SponsorsPage() {
           </p>
           <ul className="flex flex-col gap-3 mb-10 max-w-sm mx-auto text-left">
             <li className="flex items-center gap-3 text-white">
-              <span className="text-vikings-yellow text-xl shrink-0">🏐</span>
+              <span className="text-vikings-yellow font-bold shrink-0">·</span>
               Visibilitat als 340+ jugadors i famílies del club
             </li>
             <li className="flex items-center gap-3 text-white">
-              <span className="text-vikings-yellow text-xl shrink-0">📱</span>
+              <span className="text-vikings-yellow font-bold shrink-0">·</span>
               Presència a la web i xarxes socials
             </li>
           </ul>
