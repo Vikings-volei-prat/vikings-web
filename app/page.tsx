@@ -28,7 +28,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section
-        className="relative min-h-screen flex items-center justify-center text-center px-4 pt-20"
+        className="relative min-h-[75vh] flex items-center justify-center text-center px-4 pt-20"
         style={{
           backgroundImage: 'url(/images/hero-team.jpg)',
           backgroundSize: 'cover',
