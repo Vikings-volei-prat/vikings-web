@@ -10,8 +10,18 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Vikings Volei Prat",
-  description: "Club de voleibol del Prat de Llobregat",
+  title: 'Vikings Volei Prat — Club de Voleibol',
+  description: 'Club de voleibol del Prat de Llobregat. Més de 30 anys formant esportistes. 340+ jugadors, 30 equips federats, de benjamí fins a Superlliga 2.',
+  openGraph: {
+    title: 'Vikings Volei Prat',
+    description: 'Club de voleibol del Prat de Llobregat',
+    url: 'https://voleiprat.com',
+    siteName: 'Vikings Volei Prat',
+  },
+  icons: {
+    icon: '/images/logo_color.png',
+    apple: '/images/logo_color.png',
+  },
 };
 
 export default function RootLayout({

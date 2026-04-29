@@ -64,9 +64,9 @@ export default function Home() {
       <section className="bg-white py-20 px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
           {stats.map(({ number, label }) => (
-            <div key={label} className="bg-vikings-blue rounded-xl p-6 text-center">
-              <p className="text-6xl font-bold text-vikings-yellow mb-3">{number}</p>
-              <p className="text-sm font-medium uppercase tracking-wide text-white/75">{label}</p>
+            <div key={label} className="bg-vikings-blue rounded-xl text-center" style={{ padding: '32px' }}>
+              <p className="text-vikings-yellow mb-3" style={{ fontSize: '3rem', fontWeight: 800 }}>{number}</p>
+              <p className="text-white/75" style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{label}</p>
             </div>
           ))}
         </div>

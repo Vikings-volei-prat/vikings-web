@@ -64,7 +64,7 @@ export default function Footer() {
             </ul>
             <div className="flex gap-4 mt-5">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/voleiprat"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-white/70 hover:text-vikings-yellow transition-colors duration-150"
