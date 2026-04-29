@@ -72,15 +72,6 @@ export default function Footer() {
               >
                 Instagram
               </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-white/70 hover:text-vikings-yellow transition-colors duration-150"
-                aria-label="Facebook"
-              >
-                Facebook
-              </a>
             </div>
           </div>
         </div>
