@@ -7,16 +7,16 @@ export const metadata: Metadata = {
 };
 
 const sponsors = [
-  { src: '/images/sponsors/sponsor_la_brasa.png', name: 'La Brasa' },
-  { src: '/images/sponsors/sponsor_prat_actiu_logo.png', name: 'Prat Actiu' },
-  { src: '/images/sponsors/sponsor_jotun.png', name: 'Jotun' },
-  { src: '/images/sponsors/sponsor_entre_panes.jpg', name: 'Entre Panes' },
-  { src: '/images/sponsors/sponsor_asprat.png', name: 'Asprat Ascensors' },
+  { src: '/images/sponsors/sponsor_la_brasa.png', name: 'La Brasa', href: 'https://www.cafetapasbarlabrasa.es/' },
+  { src: '/images/sponsors/sponsor_prat_actiu_logo.png', name: 'Prat Actiu', href: '#' },
+  { src: '/images/sponsors/sponsor_jotun.png', name: 'Jotun', href: '#' },
+  { src: '/images/sponsors/sponsor_entre_panes.jpg', name: 'Entre Panes', href: 'https://www.instagram.com/entrepanes_elprat/' },
+  { src: '/images/sponsors/sponsor_asprat.png', name: 'Asprat Ascensors', href: 'https://www.asprat.com/' },
 ];
 
 const collaborators = [
-  { src: '/images/sponsors/colaborator_tr.png', name: 'TR Publicitat' },
-  { src: '/images/sponsors/colaborator_team_point.png', name: 'Team Point' },
+  { src: '/images/sponsors/colaborator_tr.png', name: 'TR Publicitat', href: '#' },
+  { src: '/images/sponsors/colaborator_team_point.png', name: 'Team Point', href: '#' },
 ];
 
 export default function SponsorsPage() {
@@ -37,10 +37,12 @@ export default function SponsorsPage() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-vikings-blue mb-10">Patrocinadors</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sponsors.map(({ src, name }) => (
+            {sponsors.map(({ src, name, href }) => (
               <a
                 key={name}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-col items-center justify-center p-8 bg-white border border-gray-200 rounded-xl hover:border-vikings-blue hover:shadow-md transition-all duration-200"
               >
                 <Image
@@ -62,10 +64,10 @@ export default function SponsorsPage() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-vikings-dark mb-10">Col·laboradors</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
-            {collaborators.map(({ src, name }) => (
+            {collaborators.map(({ src, name, href }) => (
               <a
                 key={name}
-                href="#"
+                href={href}
                 className="flex flex-col items-center justify-center p-6 bg-white border border-gray-200 rounded-xl hover:border-vikings-blue hover:shadow-md transition-all duration-200"
               >
                 <Image
