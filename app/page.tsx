@@ -27,17 +27,16 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section
-        className="relative min-h-[75vh] flex items-center justify-center text-center px-4 pt-20"
-        style={{
-          backgroundImage: 'url(/images/hero-team.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <section className="relative min-h-[75vh] flex items-center justify-center text-center">
+        <Image
+          src="/images/hero-team.jpg"
+          alt="Vikings Volei Prat"
+          fill
+          className="object-cover object-center"
+          priority
+        />
         <div className="absolute inset-0 bg-[#1B4FC4] opacity-80" />
-        <div className="relative z-10 max-w-3xl mx-auto">
+        <div className="relative z-10 px-4 pt-20 max-w-4xl mx-auto">
           <Image
             src="/images/logo_color.png"
             alt="Logo Vikings Volei Prat"
