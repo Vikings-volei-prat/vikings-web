@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ClubCode from './ClubCode';
 
 export const metadata: Metadata = {
   title: 'Roba del club — Vikings Volei Prat',
@@ -57,7 +58,8 @@ export default function RobaPage() {
             >
               Comprar equipació
             </a>
-            <p className="mt-3 text-sm text-gray-400">
+            <ClubCode />
+            <p className="mt-1 text-sm text-gray-400">
               Botiga oficial d&apos;equipació dels Vikings
             </p>
           </div>
