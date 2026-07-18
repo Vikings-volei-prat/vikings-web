@@ -26,7 +26,7 @@ export default function RobaPage() {
               className="inline-block text-white text-sm font-semibold px-3 py-1 rounded-full mb-5"
               style={{ backgroundColor: '#0D2E7A' }}
             >
-              Temporada 2025-2026
+              Temporada 2026-2027
             </span>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               La nostra equipació oficial
@@ -49,14 +49,16 @@ export default function RobaPage() {
               ))}
             </ul>
             <a
-              href="mailto:cvprat@gmail.com"
+              href="https://barcelonasur.erreaclubs.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-7 py-3 rounded-lg font-semibold text-gray-900 transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#F5C000' }}
             >
-              Fes la teva comanda
+              Comprar equipació
             </a>
             <p className="mt-3 text-sm text-gray-400">
-              O escriu-nos a cvprat@gmail.com
+              Botiga oficial d&apos;equipació dels Vikings
             </p>
           </div>
 
@@ -75,17 +77,29 @@ export default function RobaPage() {
 
       {/* CTA final */}
       <section className="py-20 px-4 text-center" style={{ backgroundColor: '#0D2E7A' }}>
-        <h2 className="text-3xl font-bold text-white mb-4">Tens algun dubte?</h2>
+        <h2 className="text-3xl font-bold text-white mb-4">
+          Tens algun dubte sobre la mida o el disseny?
+        </h2>
         <p className="text-white mb-8 max-w-xl mx-auto" style={{ opacity: 0.85 }}>
           Posa&apos;t en contacte amb nosaltres i t&apos;assessorarem sobre talles, dissenys i terminis.
         </p>
-        <a
-          href="mailto:cvprat@gmail.com"
-          className="inline-block px-7 py-3 rounded-lg font-semibold text-gray-900 transition-opacity hover:opacity-90"
-          style={{ backgroundColor: '#F5C000' }}
-        >
-          Contacta&apos;ns
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="mailto:cvprat@gmail.com"
+            className="inline-block px-7 py-3 rounded-lg font-semibold text-gray-900 transition-opacity hover:opacity-90"
+            style={{ backgroundColor: '#F5C000' }}
+          >
+            Contacta&apos;ns
+          </a>
+          <a
+            href="https://barcelonasur.erreaclubs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-7 py-3 rounded-lg font-semibold text-white border-2 border-white transition-colors hover:bg-white hover:text-gray-900"
+          >
+            Anar a la botiga
+          </a>
+        </div>
       </section>
     </>
   );
