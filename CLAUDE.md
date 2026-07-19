@@ -36,6 +36,8 @@ app/
   installacions/page.tsx → Instal·lacions del club
   sponsors/page.tsx     → Patrocinadors i col·laboradors
   roba/page.tsx         → Roba i equipació oficial
+  data/
+    equips.ts           → Llista d'equips separada del component
   components/
     Navbar.tsx          → Navegació principal (fixa, fons #1B4FC4)
     Footer.tsx          → Footer (fons #0D2E7A)
@@ -94,3 +96,18 @@ public/
 
 ## Codi del club (equipació Errea)
 M75NRP — necessari per comprar a barcelonasur.erreaclubs.com
+
+## Manteniment habitual
+
+### Actualitzar equips (cada temporada)
+Edita app/data/equips.ts amb la nova llista.
+No cal tocar cap component.
+
+### Afegir sponsor
+Copia el logo a public/images/sponsors/
+Edita app/sponsors/page.tsx per afegir la card.
+Actualitza aquest CLAUDE.md amb la URL del sponsor.
+
+### Afegir URL de sponsor pendent
+Busca el sponsor a app/sponsors/page.tsx
+i canvia el href="#" per la URL real.
