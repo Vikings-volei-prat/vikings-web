@@ -4,7 +4,8 @@
 ## Descripció
 Web oficial del Club Volei Prat (Vikings Volei Prat).
 Club de voleibol del Prat de Llobregat fundat el 1993.
-340+ jugadors, 30 equips federats, de benjamí fins a Superlliga 2.
+340+ jugadors, 32 equips federats, de benjamí fins a Primera Nacional.
+Temporada 2026-2027 activa. Competicions pendents de confirmar.
 Contacte: cvprat@gmail.com
 
 ## Stack tecnològic
@@ -65,7 +66,7 @@ public/
 | Ruta           | Fitxer                      | Descripció                    |
 |----------------|-----------------------------|-------------------------------|
 | /              | app/page.tsx                | Home amb hero, stats, info    |
-| /equips        | app/equips/page.tsx         | 29 equips amb filtres         |
+| /equips        | app/equips/page.tsx         | 32 equips amb filtres         |
 | /installacions | app/installacions/page.tsx  | CEM Julio Méndez i pavellons  |
 | /sponsors      | app/sponsors/page.tsx       | Sponsors i col·laboradors     |
 | /roba          | app/roba/page.tsx           | Equipació oficial + Errea     |
@@ -89,7 +90,7 @@ public/
 - Navbar: fixa (fixed top-0), z-index alt, fons #1B4FC4
 - Footer: fons #0D2E7A, tres columnes (logo+desc, navegació, contacte)
 - Stats de la home: cards bg-[#1B4FC4], número en #F5C000, etiqueta en blanc
-- Secció destacada Superlliga 2: fons #0D2E7A, badge vermell #D42B2B
+- Secció destacada (eliminada temporada 2026-2027): era fons #0D2E7A, badge vermell #D42B2B
 - Any del copyright: sempre dinàmic amb new Date().getFullYear()
 - Imatges de fons: sempre amb next/image fill + overlay div, mai CSS backgroundImage
 - next.config.ts té images: { unoptimized: true } — no canviar
