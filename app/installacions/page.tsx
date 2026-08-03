@@ -44,17 +44,6 @@ const venues: Venue[] = [
   },
 ];
 
-const extraVenue: Venue = {
-  name: 'Pavelló Fundesplai',
-  badge: 'Col·laboració',
-  badgeStyle: 'bg-gray-100 text-gray-500',
-  description:
-    'Gràcies a la col·laboració amb l\'Ajuntament, disposem d\'una pista addicional.',
-  details: [
-    { icon: '📍', text: 'El Prat de Llobregat' },
-    { icon: '🏐', text: '1 pista' },
-  ],
-};
 
 function VenueCard({ venue }: { venue: Venue }) {
   return (
@@ -95,13 +84,10 @@ export default function InstallacionsPage() {
       {/* Instal·lacions principals */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {venues.map((venue) => (
               <VenueCard key={venue.name} venue={venue} />
             ))}
-          </div>
-          <div className="max-w-md mx-auto">
-            <VenueCard venue={extraVenue} />
           </div>
         </div>
       </section>
