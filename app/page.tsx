@@ -37,6 +37,14 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[#1B4FC4] opacity-65" />
         <div className="relative z-10 px-4 pt-20 max-w-4xl mx-auto">
+          <Image
+            src="/images/logo_color.png"
+            alt="Logo Vikings Volei Prat"
+            width={280}
+            height={280}
+            className="h-[140px] sm:h-[200px] w-auto mx-auto mb-8"
+            priority
+          />
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tighter">
             <span className="text-vikings-yellow">Vikings</span> Volei Prat
           </h1>
