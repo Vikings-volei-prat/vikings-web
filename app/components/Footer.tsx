@@ -13,7 +13,7 @@ export default function Footer() {
                 alt="Logo Vikings Volei Prat"
                 width={200}
                 height={200}
-                style={{ height: '48px', width: 'auto', filter: 'brightness(0) invert(1)' }}
+                style={{ height: '48px', width: 'auto' }}
               />
               <p className="font-bold text-lg text-vikings-yellow">Vikings Volei Prat</p>
             </div>

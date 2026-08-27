@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 const stats = [
   { number: '340+', label: 'Jugadors i jugadores' },
-  { number: '30', label: 'Equips federats' },
-  { number: '+30', label: "Anys d'història" },
+  { number: '32', label: 'Equips federats' },
+  { number: '30+', label: "Anys d'història" },
 ];
 
 const highlights = [
-  'Benjamí fins a Superlliga 2',
+  'Benjamí fins a Primera Nacional',
   'Volei platja i pista',
   'Escoles i instituts del municipi',
   'Tecnificacions de Nadal i Setmana Santa',
@@ -35,17 +35,9 @@ export default function Home() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-[#1B4FC4] opacity-80" />
+        <div className="absolute inset-0 bg-[#1B4FC4] opacity-65" />
         <div className="relative z-10 px-4 pt-20 max-w-4xl mx-auto">
-          <Image
-            src="/images/logo_color.png"
-            alt="Logo Vikings Volei Prat"
-            width={280}
-            height={280}
-            className="h-[160px] sm:h-[280px] w-auto mx-auto mb-10"
-            priority
-          />
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tighter">
             <span className="text-vikings-yellow">Vikings</span> Volei Prat
           </h1>
           <p className="text-lg sm:text-xl text-white/80 mb-12 max-w-xl mx-auto leading-relaxed">
@@ -54,7 +46,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/equips"
-              className="px-8 py-3.5 bg-vikings-yellow text-vikings-dark font-semibold rounded-lg hover:brightness-110 transition-all duration-150"
+              className="px-8 py-3.5 bg-vikings-yellow text-vikings-dark font-extrabold rounded-lg hover:brightness-110 transition-all duration-150"
             >
               Els nostres equips
             </Link>
@@ -69,19 +61,27 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {stats.map(({ number, label }) => (
-            <div key={label} className="bg-vikings-blue rounded-xl text-center" style={{ padding: '32px' }}>
-              <p className="text-vikings-yellow mb-3" style={{ fontSize: '3rem', fontWeight: 800 }}>{number}</p>
-              <p className="text-white/75" style={{ fontSize: '0.875rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{label}</p>
-            </div>
-          ))}
+      <section className="bg-[#F8F8F8] py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-vikings-blue mb-8">
+            El club en xifres
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {stats.map(({ number, label }) => (
+              <div
+                key={label}
+                className="bg-vikings-blue rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-200"
+              >
+                <p className="text-5xl font-extrabold text-vikings-yellow mb-3">{number}</p>
+                <p className="text-sm uppercase tracking-wide text-white/75">{label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Sobre el club */}
-      <section className="bg-[#F8F8F8] py-20 px-4">
+      <section className="bg-white py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
@@ -95,14 +95,14 @@ export default function Home() {
                 Catalunya, especialment al Baix Llobregat.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Actualment comptem amb més de 340 jugadors i jugadores, repartits en 30 equips
+                Actualment comptem amb més de 340 jugadors i jugadores, repartits en 32 equips
                 federats i escolars, des de benjamí fins a sènior, tant en pista com en vòlei platja.
               </p>
             </div>
             <ul className="space-y-4 md:pt-2">
               {highlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-vikings-yellow text-2xl leading-none mt-0.5" aria-hidden>●</span>
+                  <span className="text-vikings-yellow text-lg leading-snug mt-0.5" aria-hidden>●</span>
                   <span className="text-gray-700 text-base">{item}</span>
                 </li>
               ))}
@@ -112,16 +112,16 @@ export default function Home() {
       </section>
 
       {/* Formació i valors */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-[#F8F8F8] py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-vikings-dark mb-10">
             Formació i valors
           </h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {values.map(({ emoji, title, text }) => (
               <div
                 key={title}
-                className="bg-[#F8F8F8] rounded-lg p-6"
+                className="bg-white rounded-lg p-6"
                 style={{ borderTop: '3px solid #1B4FC4' }}
               >
                 <span className="text-3xl mb-4 block">{emoji}</span>
@@ -160,7 +160,7 @@ export default function Home() {
             href="https://www.instagram.com/voleiprat"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-10 py-4 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity duration-150"
+            className="inline-block px-10 py-4 text-white font-extrabold rounded-lg hover:opacity-90 transition-opacity duration-150"
             style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}
           >
             Segueix @voleiprat
@@ -180,7 +180,7 @@ export default function Home() {
       {/* CTA final */}
       <section className="bg-vikings-blue py-24 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-5 leading-tight">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-5 leading-tight tracking-tighter">
             Vols formar part dels Vikings?
           </h2>
           <p className="text-white/80 text-lg mb-12 leading-relaxed">
@@ -189,7 +189,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:cvprat@gmail.com"
-            className="inline-block px-10 py-4 bg-vikings-yellow text-vikings-dark font-semibold text-lg rounded-lg hover:brightness-110 transition-all duration-150"
+            className="inline-block px-10 py-4 bg-vikings-yellow text-vikings-dark font-extrabold text-lg rounded-lg hover:brightness-110 transition-all duration-150"
           >
             Contacta'ns
           </a>

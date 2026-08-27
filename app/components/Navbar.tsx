@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const links = [
@@ -12,8 +13,13 @@ const links = [
   { href: '/roba', label: 'Roba del club' },
 ];
 
+function isActive(href: string, pathname: string) {
+  return href === '/' ? pathname === '/' : pathname.startsWith(href);
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-vikings-blue text-white shadow-md">
@@ -31,18 +37,30 @@ export default function Navbar() {
             <span className="font-medium text-white">Volei Prat</span>
           </Link>
 
-          <ul className="hidden md:flex items-center gap-8">
-            {links.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className="text-sm font-medium text-white hover:text-vikings-yellow transition-colors duration-150"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-6">
+            <ul className="flex items-center gap-6">
+              {links.map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`text-sm font-medium transition-colors duration-150 ${
+                      isActive(href, pathname)
+                        ? 'text-vikings-yellow border-b-2 border-vikings-yellow pb-0.5'
+                        : 'text-white hover:text-vikings-yellow'
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="mailto:cvprat@gmail.com"
+              className="px-4 py-1.5 bg-vikings-yellow text-vikings-dark text-sm font-extrabold rounded-lg hover:brightness-110 transition-all duration-150"
+            >
+              Apunta't
+            </a>
+          </div>
 
           <button
             className="md:hidden flex flex-col justify-center gap-1.5 p-2 rounded focus:outline-none focus:ring-2 focus:ring-vikings-yellow"
@@ -62,13 +80,26 @@ export default function Navbar() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="block py-2 px-2 text-sm font-medium text-white rounded hover:bg-white/10 hover:text-vikings-yellow transition-colors duration-150"
+                  className={`block py-2 px-2 text-sm font-medium rounded transition-colors duration-150 ${
+                    isActive(href, pathname)
+                      ? 'text-vikings-yellow bg-white/10'
+                      : 'text-white hover:bg-white/10 hover:text-vikings-yellow'
+                  }`}
                   onClick={() => setOpen(false)}
                 >
                   {label}
                 </Link>
               </li>
             ))}
+            <li className="mt-2 px-2">
+              <a
+                href="mailto:cvprat@gmail.com"
+                className="block py-2.5 bg-vikings-yellow text-vikings-dark text-sm font-extrabold rounded-lg text-center hover:brightness-110 transition-all duration-150"
+                onClick={() => setOpen(false)}
+              >
+                Apunta't
+              </a>
+            </li>
           </ul>
         )}
       </nav>
