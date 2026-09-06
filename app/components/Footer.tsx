@@ -32,11 +32,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/installacions" className="hover:text-vikings-yellow transition-colors duration-150">
-                  Instal·lacions
-                </Link>
-              </li>
-              <li>
                 <Link href="/sponsors" className="hover:text-vikings-yellow transition-colors duration-150">
                   Sponsors
                 </Link>

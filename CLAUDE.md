@@ -67,7 +67,6 @@ public/
 |----------------|-----------------------------|-------------------------------|
 | /              | app/page.tsx                | Home amb hero, stats, info    |
 | /equips        | app/equips/page.tsx         | 32 equips amb filtres         |
-| /installacions | app/installacions/page.tsx  | CEM Julio Méndez i pavellons  |
 | /sponsors      | app/sponsors/page.tsx       | Sponsors i col·laboradors     |
 | /roba          | app/roba/page.tsx           | Equipació oficial + Errea     |
 
@@ -94,6 +93,7 @@ public/
 - Any del copyright: sempre dinàmic amb new Date().getFullYear()
 - Imatges de fons: sempre amb next/image fill + overlay div, mai CSS backgroundImage
 - next.config.ts té images: { unoptimized: true } — no canviar
+- Instal·lacions integrades a la home com a secció "On entrenem"
 
 ## Codi del club (equipació Errea)
 M75NRP — necessari per comprar a barcelonasur.erreaclubs.com

@@ -8,7 +8,6 @@ import { useState } from 'react';
 const links = [
   { href: '/', label: 'Inici' },
   { href: '/equips', label: 'Els nostres equips' },
-  { href: '/installacions', label: 'Instal·lacions' },
   { href: '/sponsors', label: 'Sponsors' },
   { href: '/roba', label: 'Roba del club' },
 ];

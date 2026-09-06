@@ -185,6 +185,88 @@ export default function Home() {
         </div>
       </section>
 
+      {/* On entrenem */}
+      <section className="py-20 px-4" style={{ backgroundColor: '#F8F8F8' }}>
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: '#1B4FC4' }}>
+            Instal·lacions
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-10" style={{ color: '#1B4FC4' }}>
+            On entrenem
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col gap-3">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-xl font-bold text-gray-900">CEM Julio Méndez</h3>
+                <span className="shrink-0 text-xs font-semibold px-2.5 py-1 rounded-full bg-[#e8f0fe] text-[#1B4FC4]">
+                  Instal·lació principal
+                </span>
+              </div>
+              <ul className="space-y-1.5 text-gray-600 text-sm">
+                <li>📍 El Prat de Llobregat</li>
+                <li>🏐 3 pistes simultànies</li>
+                <li>👥 Capacitat 400+ espectadors</li>
+              </ul>
+              <a
+                href="https://maps.google.com/?q=CEM+Julio+Mendez+El+Prat+de+Llobregat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start text-sm font-semibold px-4 py-1.5 rounded-lg border-2 border-[#1B4FC4] text-[#1B4FC4] hover:bg-[#1B4FC4] hover:text-white transition-colors duration-150"
+              >
+                Com arribar
+              </a>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl p-6 shadow-sm flex flex-col gap-3">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-xl font-bold text-gray-900">Pavelló Xavier Marcilla</h3>
+                <span className="shrink-0 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-500">
+                  Instal·lació secundària
+                </span>
+              </div>
+              <ul className="space-y-1.5 text-gray-600 text-sm">
+                <li>📍 El Prat de Llobregat</li>
+                <li>🏐 2 pistes simultànies</li>
+              </ul>
+              <a
+                href="https://maps.google.com/?q=Pavello+Xavier+Marcilla+El+Prat+de+Llobregat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start text-sm font-semibold px-4 py-1.5 rounded-lg border-2 border-[#1B4FC4] text-[#1B4FC4] hover:bg-[#1B4FC4] hover:text-white transition-colors duration-150"
+              >
+                Com arribar
+              </a>
+            </div>
+          </div>
+
+          {/* Franja destacada */}
+          <div
+            className="bg-white flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+            style={{ borderLeft: '3px solid #F5C000', borderRadius: '8px', padding: '16px 24px' }}
+          >
+            <span className="text-3xl">📅</span>
+            <div className="flex-1">
+              <p className="font-bold text-gray-900 mb-0.5">Vine a veure&apos;ns!</p>
+              <p className="text-sm text-gray-600">
+                Cada dissabte al matí al CEM Julio Méndez. L&apos;entrada és lliure.
+              </p>
+            </div>
+            <a
+              href="https://maps.google.com/?q=CEM+Julio+Mendez+El+Prat+de+Llobregat"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 text-sm font-semibold px-4 py-1.5 rounded-lg text-gray-900 hover:opacity-90 transition-opacity duration-150"
+              style={{ backgroundColor: '#F5C000' }}
+            >
+              Com arribar
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA final */}
       <section className="bg-vikings-blue py-24 px-4">
         <div className="max-w-2xl mx-auto text-center">
